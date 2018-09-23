@@ -22,21 +22,6 @@ defmodule PongIpWeb do
       use Phoenix.Controller, namespace: PongIpWeb
       import Plug.Conn
       import PongIpWeb.Router.Helpers
-      import PongIpWeb.Gettext
-    end
-  end
-
-  def view do
-    quote do
-      use Phoenix.View, root: "lib/pong_ip_web/templates",
-                        namespace: PongIpWeb
-
-      # Import convenience functions from controllers
-      import Phoenix.Controller, only: [get_flash: 2, view_module: 1]
-
-      import PongIpWeb.Router.Helpers
-      import PongIpWeb.ErrorHelpers
-      import PongIpWeb.Gettext
     end
   end
 
@@ -45,13 +30,6 @@ defmodule PongIpWeb do
       use Phoenix.Router
       import Plug.Conn
       import Phoenix.Controller
-    end
-  end
-
-  def channel do
-    quote do
-      use Phoenix.Channel
-      import PongIpWeb.Gettext
     end
   end
 
